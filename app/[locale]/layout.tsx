@@ -3,8 +3,8 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import "../globals.css";
-// Yeni bileşeni import et:
-import { WhatsAppButton } from '@/components/WhatsAppButton'; 
+import { WhatsAppButton } from '@/components/WhatsAppButton';
+import { ScrollToTop } from '@/components/ScrollToTop'; // <--- IMPORT ETMEYİ UNUTMA
 
 export default async function LocaleLayout({
   children,
@@ -26,8 +26,11 @@ export default async function LocaleLayout({
       <body>
         <NextIntlClientProvider messages={messages}>
           {children}
-          {/* WhatsApp Butonunu Buraya Ekliyoruz */}
+          
+          {/* Aksiyon Butonları */}
           <WhatsAppButton />
+          <ScrollToTop /> {/* <--- BURAYA EKLENDİ */}
+          
         </NextIntlClientProvider>
       </body>
     </html>
