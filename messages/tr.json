@@ -1,0 +1,94 @@
+{
+  "Header": {
+    "home": "Anasayfa",
+    "services": "Hizmetler",
+    "about": "Hakkımızda",
+    "gallery": "Galeri",
+    "contact": "İletişim",
+    "subtitle": "Mersin"
+  },
+  "Hero": {
+    "badge": "Yıllardır Profesyonel Çözümler",
+    "title": "Modern Alüminyum & PVC Çözümleri",
+    "description": "3K Alüminyum, Mersin'de cephe kaplama sistemleri, cam balkon sistemleri, alüminyum doğrama ve PVC doğrama konularında uzmanlaşmıştır. Her projede kalite ve hassasiyet sunuyoruz.",
+    "getQuote": "Teklif Al",
+    "ourServices": "Hizmetlerimiz",
+    "stats": {
+      "projects": "Tamamlanan Proje",
+      "satisfaction": "Müşteri Memnuniyeti"
+    },
+    "warranty": "Garanti",
+    "years": "10 Yıl"
+  },
+  "Services": {
+    "title": "Uzmanlık Alanlarımız",
+    "subtitle": "Modern mimari ihtiyaçlarınız için kapsamlı alüminyum ve PVC çözümleri sunuyoruz.",
+    "items": {
+      "facade": {
+        "title": "Cephe Sistemleri",
+        "description": "Binalarınızın estetiğini ve enerji verimliliğini artıran modern kompozit ve silikon cephe kaplamaları."
+      },
+      "balcony": {
+        "title": "Cam Balkon",
+        "description": "Balkonlarınızı dört mevsim kullanılabilir yaşam alanlarına dönüştüren katlanır ve sürme sistemler."
+      },
+      "aluminum": {
+        "title": "Alüminyum Doğrama",
+        "description": "Uzun ömürlü, dayanıklı ve şık alüminyum kapı, pencere ve vitrin sistemleri."
+      },
+      "pvc": {
+        "title": "PVC Sistemleri",
+        "description": "Yüksek yalıtım performansı sağlayan kaliteli PVC kapı ve pencere çözümleri."
+      }
+    }
+  },
+  "About": {
+    "title": "Hakkımızda",
+    "description": "Mersin'de kurulan 3K Alüminyum, sektördeki deneyimi ve uzman kadrosuyla modern yapı çözümleri sunmaktadır. Müşteri memnuniyetini esas alan yaklaşımımızla, projelerinize değer katıyoruz. Kaliteli malzeme ve kusursuz işçilik prensibiyle çalışıyoruz.",
+    "features": {
+      "feature1": "Profesyonel Ekip",
+      "feature2": "Kaliteli Malzeme",
+      "feature3": "Zamanında Teslimat",
+      "feature4": "Satış Sonrası Destek"
+    }
+  },
+  "Gallery": {
+    "title": "Projelerimiz",
+    "subtitle": "Tamamladığımız projelerden seçkiler ve uygulama örnekleri.",
+    "viewProject": "Projeyi İncele"
+  },
+  "Contact": {
+    "title": "Bizimle İletişime Geçin",
+    "description": "Projeleriniz için teklif almak veya sorularınız için bize ulaşın. Size en kısa sürede dönüş yapacağız.",
+    "address": {
+      "title": "Adres",
+      "value": "Yenişehir, Mersin, Türkiye"
+    },
+    "phone": {
+      "title": "Telefon"
+    },
+    "email": {
+      "title": "E-posta"
+    },
+    "form": {
+      "title": "Mesaj Gönderin",
+      "name": "Adınız Soyadınız",
+      "phone": "Telefon Numaranız",
+      "email": "E-posta Adresiniz",
+      "message": "Mesajınız",
+      "submit": "Mesajı Gönder"
+    }
+  },
+  "Footer": {
+    "description": "Modern yaşam alanları için kaliteli ve estetik alüminyum çözümleri.",
+    "quickLinks": "Hızlı Bağlantılar",
+    "links": {
+      "home": "Anasayfa",
+      "services": "Hizmetler",
+      "about": "Hakkımızda",
+      "contact": "İletişim"
+    },
+    "social": "Sosyal Medya",
+    "rights": "Tüm hakları saklıdır."
+  }
+}

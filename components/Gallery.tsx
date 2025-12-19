@@ -1,75 +1,40 @@
 "use client";
 
-import { ImageWithFallback } from './figma/ImageWithFallback';
-
-const projects = [
-  {
-    title: 'Modern Facade Project',
-    category: 'Facade Cladding',
-    image: 'https://images.unsplash.com/photo-1615465096619-7be6d511dd35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhbHVtaW51bSUyMGZhY2FkZSUyMGNsYWRkaW5nfGVufDF8fHx8MTc2NjE3NDE4MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
-  },
-  {
-    title: 'Glass Balcony Installation',
-    category: 'Glass Balcony',
-    image: 'https://images.unsplash.com/photo-1686660052172-67cf6bdca33f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnbGFzcyUyMGJhbGNvbnklMjBtb2Rlcm58ZW58MXx8fHwxNzY2MTc0MTgwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
-  },
-  {
-    title: 'Aluminum Windows',
-    category: 'Aluminum Joinery',
-    image: 'https://images.unsplash.com/photo-1688319694677-7729b163abf8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhbHVtaW51bSUyMHdpbmRvdyUyMGpvaW5lcnl8ZW58MXx8fHwxNzY2MTc0MTgwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
-  },
-  {
-    title: 'Commercial Building',
-    category: 'PVC Joinery',
-    image: 'https://images.unsplash.com/photo-1695067440629-b5e513976100?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBidWlsZGluZyUyMGFyY2hpdGVjdHVyZXxlbnwxfHx8fDE3NjYxMzkzODF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
-  },
-  {
-    title: 'Residential Complex',
-    category: 'Facade Cladding',
-    image: 'https://images.unsplash.com/photo-1715156153744-d5fd2f1f66eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBnbGFzcyUyMGZhY2FkZSUyMGJ1aWxkaW5nfGVufDF8fHx8MTc2NjE3NDE3OXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
-  },
-  {
-    title: 'Glass Solutions',
-    category: 'Glass Balcony',
-    image: 'https://images.unsplash.com/photo-1686660052172-67cf6bdca33f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnbGFzcyUyMGJhbGNvbnklMjBtb2Rlcm58ZW58MXx8fHwxNzY2MTc0MTgwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
-  }
-];
+import { useTranslations } from 'next-intl';
+import { ImageWithFallback } from './figma/ImageWithFallback'; // Dosya yolu sende farklı olabilir
 
 export function Gallery() {
+  const t = useTranslations('Gallery');
+
+  const images = [
+    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80",
+    "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80",
+    "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&q=80",
+    "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80",
+    "https://images.unsplash.com/photo-1600573472592-401b489a3cdc?auto=format&fit=crop&q=80",
+    "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&q=80"
+  ];
+
   return (
     <section id="gallery" className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full mb-4">
-            Our Work
-          </div>
-          <h2 className="text-4xl md:text-5xl text-gray-900 mb-4">
-            Featured Projects
-          </h2>
-          <p className="text-xl text-gray-600">
-            Explore some of our recent projects showcasing our expertise in aluminum and PVC solutions.
-          </p>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('title')}</h2>
+          <p className="text-gray-600">{t('subtitle')}</p>
         </div>
-
-        {/* Gallery Grid */}
+        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
-            >
-              <div className="relative h-80 overflow-hidden">
-                <ImageWithFallback
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent opacity-70 group-hover:opacity-90 transition-opacity"></div>
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <div className="text-sm text-blue-400 mb-2">{project.category}</div>
-                <h3 className="text-xl text-white">{project.title}</h3>
+          {images.map((src, index) => (
+            <div key={index} className="group relative aspect-[4/3] rounded-xl overflow-hidden cursor-pointer">
+              <ImageWithFallback
+                src={src}
+                alt={`Project ${index + 1}`}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <span className="text-white font-medium px-4 py-2 border border-white/30 rounded-full backdrop-blur-sm">
+                  {t('viewProject')}
+                </span>
               </div>
             </div>
           ))}

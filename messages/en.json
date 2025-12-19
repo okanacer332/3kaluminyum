@@ -1,0 +1,94 @@
+{
+  "Header": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "subtitle": "Mersin"
+  },
+  "Hero": {
+    "badge": "Professional Solutions Since Years",
+    "title": "Modern Aluminum & PVC Solutions",
+    "description": "3K Aluminum specializes in facade cladding systems, glass balcony systems, aluminum joinery, and PVC joinery in Mersin. We deliver quality and precision in every project.",
+    "getQuote": "Get a Quote",
+    "ourServices": "Our Services",
+    "stats": {
+      "projects": "Projects Completed",
+      "satisfaction": "Client Satisfaction"
+    },
+    "warranty": "Warranty",
+    "years": "10 Years"
+  },
+  "Services": {
+    "title": "Our Expertise",
+    "subtitle": "We offer comprehensive aluminum and PVC solutions for your modern architectural needs.",
+    "items": {
+      "facade": {
+        "title": "Facade Systems",
+        "description": "Modern composite and silicone facade claddings enhancing aesthetics and energy efficiency."
+      },
+      "balcony": {
+        "title": "Glass Balcony",
+        "description": "Folding and sliding systems transforming your balconies into four-season living spaces."
+      },
+      "aluminum": {
+        "title": "Aluminum Joinery",
+        "description": "Long-lasting, durable, and stylish aluminum door, window, and showcase systems."
+      },
+      "pvc": {
+        "title": "PVC Systems",
+        "description": "High-quality PVC door and window solutions providing superior insulation performance."
+      }
+    }
+  },
+  "About": {
+    "title": "About Us",
+    "description": "Established in Mersin, 3K Aluminum provides modern structural solutions with its industry experience and expert staff. We add value to your projects with our customer satisfaction-oriented approach. We work with the principle of quality materials and flawless workmanship.",
+    "features": {
+      "feature1": "Professional Team",
+      "feature2": "Quality Material",
+      "feature3": "On-Time Delivery",
+      "feature4": "After-Sales Support"
+    }
+  },
+  "Gallery": {
+    "title": "Our Projects",
+    "subtitle": "Selections from our completed projects and application examples.",
+    "viewProject": "View Project"
+  },
+  "Contact": {
+    "title": "Get in Touch",
+    "description": "Contact us to get a quote for your projects or for any questions. We will get back to you as soon as possible.",
+    "address": {
+      "title": "Address",
+      "value": "Yenisehir, Mersin, Turkey"
+    },
+    "phone": {
+      "title": "Phone"
+    },
+    "email": {
+      "title": "Email"
+    },
+    "form": {
+      "title": "Send a Message",
+      "name": "Full Name",
+      "phone": "Phone Number",
+      "email": "Email Address",
+      "message": "Your Message",
+      "submit": "Send Message"
+    }
+  },
+  "Footer": {
+    "description": "Quality and aesthetic aluminum solutions for modern living spaces.",
+    "quickLinks": "Quick Links",
+    "links": {
+      "home": "Home",
+      "services": "Services",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "social": "Social Media",
+    "rights": "All rights reserved."
+  }
+}

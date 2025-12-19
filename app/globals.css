@@ -111,10 +111,18 @@
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
+  html {
+    scrollbar-gutter: stable; /* Kaydırma çubuğu yerini hep rezerve et */
   }
+  
+  /* Radix UI Select açıldığında body'ye padding eklemesini engelle */
+  body[data-scroll-locked] {
+    padding-right: 0 !important;
+    overflow: auto !important; /* İsteğe bağlı: Scroll'u kilitlemesini de engelleyebiliriz */
+  }
+
+  /* Body her zaman %100 genişlikte kalsın */
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground overflow-x-hidden w-full;
   }
 }
