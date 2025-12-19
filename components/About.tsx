@@ -1,3 +1,5 @@
+"use client";
+
 import { Award, Users, Target, Wrench } from 'lucide-react';
 
 const features = [

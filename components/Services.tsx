@@ -1,3 +1,5 @@
+"use client";
+
 import { Building2, Home, DoorOpen, Frame } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
