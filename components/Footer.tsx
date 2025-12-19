@@ -1,7 +1,9 @@
 "use client";
 
 import { useTranslations } from 'next-intl';
-import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
+// Next.js Image bileşenini kullanmıyoruz çünkü public klasöründeki jpeg'i direkt img etiketiyle çekmek bazen daha esnek hizalanır.
+// Ama istersen import Image from 'next/image' de kullanabilirsin.
 
 export function Footer() {
   const t = useTranslations('Footer');
@@ -48,8 +50,26 @@ export function Footer() {
           </div>
         </div>
         
-        <div className="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
-          <p>&copy; {new Date().getFullYear()} 3K Aluminum. {t('rights')}</p>
+        {/* GÜNCELLENEN KISIM: COPYRIGHT ALANI */}
+        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-center gap-2 text-gray-500 text-sm">
+          <span>&copy; {new Date().getFullYear()}</span>
+          
+          {/* Logo Linki */}
+          <a 
+            href="https://acrtech.com.tr" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-block hover:opacity-80 transition-opacity"
+          >
+            {/* Logo Boyutunu h-6 (24px) civarında tutarak satır yüksekliğine uyduruyoruz */}
+            <img 
+              src="/acrtech.jpeg" 
+              alt="ACR Tech" 
+              className="h-8 w-auto rounded-sm" // Köşeleri hafif yumuşatmak için rounded-sm ekledim
+            />
+          </a>
+
+          <span>{t('rights')}</span>
         </div>
       </div>
     </footer>

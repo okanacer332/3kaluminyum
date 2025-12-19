@@ -4,21 +4,25 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import "../globals.css";
 import { WhatsAppButton } from '@/components/WhatsAppButton';
-import { ScrollToTop } from '@/components/ScrollToTop'; // <--- IMPORT ETMEYİ UNUTMA
+import { ScrollToTop } from '@/components/ScrollToTop';
 
 export default async function LocaleLayout({
   children,
   params
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  // DÜZELTME BURADA: params artık Promise tipinde tanımlanmalı
+  params: Promise<{ locale: string }>;
 }) {
+  // Promise'i burada çözüyoruz (Next.js 15 Standardı)
   const { locale } = await params;
 
+  // Gelen dil destekleniyor mu kontrol et
   if (!routing.locales.includes(locale as any)) {
     notFound();
   }
 
+  // Mesajları sunucudan al
   const messages = await getMessages();
 
   return (
@@ -29,7 +33,7 @@ export default async function LocaleLayout({
           
           {/* Aksiyon Butonları */}
           <WhatsAppButton />
-          <ScrollToTop /> {/* <--- BURAYA EKLENDİ */}
+          <ScrollToTop />
           
         </NextIntlClientProvider>
       </body>
