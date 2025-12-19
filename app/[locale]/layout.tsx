@@ -1,3 +1,4 @@
+import type { Metadata } from "next"; // Metadata için tip tanımı
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -6,23 +7,29 @@ import "../globals.css";
 import { WhatsAppButton } from '@/components/WhatsAppButton';
 import { ScrollToTop } from '@/components/ScrollToTop';
 
+// SEKME BAŞLIĞI VE SEO AYARLARI BURADA YAPILIR
+export const metadata: Metadata = {
+  title: "Mersin 3K Aluminyum",
+  description: "Mersin'de Alüminyum Cephe, Cam Balkon ve PVC Sistemleri",
+  icons: {
+    icon: '/icon.svg', // Eğer favicon.ico yerine svg kullanıyorsan
+  }
+};
+
 export default async function LocaleLayout({
   children,
   params
 }: {
   children: React.ReactNode;
-  // DÜZELTME BURADA: params artık Promise tipinde tanımlanmalı
+  // Next.js 15 için Promise tipi (Hata almamak için önemli)
   params: Promise<{ locale: string }>;
 }) {
-  // Promise'i burada çözüyoruz (Next.js 15 Standardı)
   const { locale } = await params;
 
-  // Gelen dil destekleniyor mu kontrol et
   if (!routing.locales.includes(locale as any)) {
     notFound();
   }
 
-  // Mesajları sunucudan al
   const messages = await getMessages();
 
   return (
